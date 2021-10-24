@@ -1,6 +1,7 @@
 import React from 'react'
 import './Register.css'
 import img from '../../images/img.jpg'
+import {Link} from 'react-router-dom'
 
 const Register = () => {
   return (
@@ -17,7 +18,7 @@ const Register = () => {
         <label>Confirm Password</label>
         <input type="password"  />
       <button className="blog1__registerButton2">register</button>
-      <button className="blog1__loginButton2">Login</button>
+      <Link to="/login" className="blog1__link"><button className="blog1__loginButton2">Login</button></Link>
 
       </form>
     </div>

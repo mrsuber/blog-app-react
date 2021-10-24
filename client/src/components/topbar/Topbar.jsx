@@ -6,8 +6,10 @@ faSearch
 
 import {Pinterest,Instagram,Facebook,Twitter} from '@material-ui/icons'
 import avatar from '../images/me.webp'
+import {Link} from 'react-router-dom'
 
-const Topbar = () => {
+const Topbar = ({user}) => {
+
   return (
     <div className="blog1__topbar">
     <div className="blog1__top-left">
@@ -20,16 +22,21 @@ const Topbar = () => {
     </div>
     <div className="blog1__top-center">
       <ul className="blog1__top-list">
-        <li className="blog1__top-listItem">HOME</li >
+        <li className="blog1__top-listItem"><Link className="blog1__link" to="/">HOME</Link></li >
         <li className="blog1__top-listItem">ABOUT</li >
         <li className="blog1__top-listItem">CONTACT</li >
-        <li className="blog1__top-listItem">WRITE</li >
-        <li className="blog1__top-listItem">LOGOUT</li >
+        <li className="blog1__top-listItem"><Link className="blog1__link" to="/write">WRITE</Link></li >
+        <li className="blog1__top-listItem">{user && "LOGOUT"}</li >
 
       </ul>
     </div>
     <div className="blog1__top-right">
-      <img className="blog1__top-image" src={avatar} alt="avatar" />
+    {user?(<img className="blog1__top-image" src={avatar} alt="avatar" />):
+    ( <ul className="blog1__top-list">
+      <li className="blog1__top-listItem"><Link className="blog1__link" to="/login">LOGIN </Link></li>
+    <li className="blog1__top-listItem"><Link className="blog1__link" to="/register"> REGISTER</Link></li>
+    </ul>
+  )}
       <span className="blog1__topSearch-icon"><FontAwesomeIcon icon={faSearch}/></span>
     </div>
     </div>
