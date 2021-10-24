@@ -1,9 +1,9 @@
-import {Topbar,Home,Single,Write} from './components'
+import {Topbar,Home,Single,Write,Settings} from './components'
 function App() {
   return (
     <>
     <Topbar />
-    <Write />
+    <Settings />
     </>
   );
 }
