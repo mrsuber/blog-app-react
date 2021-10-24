@@ -1,0 +1,52 @@
+.blog1__login{
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: gray; */
+  background-size: cover;
+}
+
+.blog1__loginTitle{
+  font-size: 50px;
+}
+
+.blog1__loginForm{
+margin-top: 20px;
+ display: flex;
+ flex-direction: column;
+}
+
+.blog1__loginForm>label{
+  margin: 10px 0;
+}
+
+.blog1__loginForm>input{
+  padding: 10px;
+  background: white;
+  border: none;
+
+}
+.blog1__loginButton{
+margin-top: 20px;
+cursor: pointer;
+background-color:teal;
+border: none;
+color: white;
+border-radius: 10px;
+padding: 10px;
+}
+
+.blog1__registerButton{
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color:lightcoral;
+  padding: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor:pointer;
+}
